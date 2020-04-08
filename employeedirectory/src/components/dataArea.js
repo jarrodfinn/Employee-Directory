@@ -10,19 +10,22 @@ export default class DataArea extends Component {
     //componentDidMount
     employees: [],
     order: "descend",
-    filteredUsers: [{}]
-  }
-  headings = ["name..."]
+    filteredUsers: [{}],
+  };
+  headings = ["name..."];
 
   componentDidMount() {
     //page loads, fetch "employees" from json, set state of users and filteredusers to the result
-    fetch("/employees.json").then(function (response) {
-      return (response.json())
-    }).then(response => {
-      this.setState({ employees: response })
-    }).catch(error => {
-      console.log(error)
-    })
+    fetch("/employees.json")
+      .then(function (response) {
+        return response.json();
+      })
+      .then((response) => {
+        this.setState({ employees: response });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
   handleSearchChange() {
     //filter out users
@@ -31,12 +34,12 @@ export default class DataArea extends Component {
   handleSort(heading) {
     if (this.state.order === "descend") {
       this.setState({
-        order: "ascend"
-      })
+        order: "ascend",
+      });
     } else {
       this.setState({
-        order: "descend"
-      })
+        order: "descend",
+      });
     }
   }
   render() {
@@ -66,7 +69,5 @@ export default class DataArea extends Component {
         </tbody>
       </table>
     );
-    
   }
 }
-
