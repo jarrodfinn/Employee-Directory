@@ -47,16 +47,19 @@ export default class DataArea extends Component {
   };
 
   sortByDateOfBirth = () => {
+  
     this.setState({
       employees: this.state.employees.sort(function (a, b) {
-        var dateA = new Date(a.date).getTime();
-        var dateB = new Date(b.date).getTime();
+        console.log(a, b)
+        var dateA = new Date(a.dob).getTime();
+        var dateB = new Date(b.dob).getTime();
         return dateA > dateB ? 1 : -1;
       })
     });
 }
 
   render() {
+    console.log("employees", this.state.employees)
     if (this.state.isLoading === true) {
       return <div>Loading...</div>;
     }
@@ -71,7 +74,7 @@ export default class DataArea extends Component {
           <option value="Accounting">Accounting</option>
           <option value="Tech Support">Tech Support</option>
         </select>
-        <button type='button' onChange={this.sortByDateOfBirth}>Filter by Date of Birth</button>
+        <button type='button' onClick={this.sortByDateOfBirth}>Filter by Date of Birth</button>
         <table>
           <thead>
             <tr>
