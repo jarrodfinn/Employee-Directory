@@ -4,7 +4,6 @@
 
 import React, { Component } from "react";
 import App from "../App";
-import Moment from "moment";
 
 export default class DataArea extends Component {
   state = {
@@ -46,26 +45,43 @@ export default class DataArea extends Component {
     }
   };
 
-  sortByDateOfBirth = () => {
-  
-    this.setState({
-      employees: this.state.employees.sort(function (a, b) {
-        console.log(a, b)
-        var dateA = new Date(a.dob).getTime();
-        var dateB = new Date(b.dob).getTime();
-        return dateA > dateB ? 1 : -1;
-      })
-    });
-}
+  sortByDateOfBirth = (event) => {
+    const dob = event.target.value;
+    if (dob === "oldest") {
+      this.setState({
+        employees: this.state.employees.sort(function (a, b) {
+          var dateA = new Date(a.dob).getTime();
+          var dateB = new Date(b.dob).getTime();
+          return dateA > dateB ? 1 : -1;
+        }),
+      });
+    } else if (dob === "youngest") {
+      this.setState({
+        employees: this.state.employees.sort(function (a, b) {
+          var dateA = new Date(a.dob).getTime();
+          var dateB = new Date(b.dob).getTime();
+          return dateA < dateB ? 1 : -1;
+        }),
+      });
+    } else if (dob === "default") {
+      this.setState({
+        employees: this.state.employees.sort(function (a, b) {
+          var dateA = new Date(a.dob).getTime();
+          var dateB = new Date(b.dob).getTime();
+          return dateA = dateB ? 1 : -1;
+        }),
+      });
+    }
+  }
 
   render() {
-    console.log("employees", this.state.employees)
+    // console.log("employees", this.state.employees)
     if (this.state.isLoading === true) {
       return <div>Loading...</div>;
     }
     return (
       <div>
-        <label for="position">Filter by position:</label>
+        <label htmlFor="position">Filter by position:</label>
         <select onChange={this.handlePositionChange} id="position">
           <option value="All">All</option>
           <option value="KOAM">KOAM</option>
@@ -78,10 +94,13 @@ export default class DataArea extends Component {
           <option value="Music Engineer">Music Engineer</option>
           <option value="Tech Support">Tech Support</option>
         </select>
-        <button type="button" onClick={this.sortByDateOfBirth}>
-          Filter by Date of Birth
-        </button>
-        <table>
+        <label htmlFor="dob">Sort by date of birth:</label>
+        <select onChange={this.sortByDateOfBirth}>
+          <option value="default">Default</option>
+          <option value="oldest">Oldest to Youngest</option>
+          <option value="youngest">Youngest to Oldest</option>
+        </select>
+        <table className="table table-bordered">
           <thead>
             <tr>
               <th>Name</th>
