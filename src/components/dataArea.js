@@ -3,7 +3,6 @@
 //house data table
 
 import React, { Component } from "react";
-import App from "../App";
 
 export default class DataArea extends Component {
   state = {
@@ -63,15 +62,7 @@ export default class DataArea extends Component {
           return dateA < dateB ? 1 : -1;
         }),
       });
-    } else if (dob === "default") {
-      this.setState({
-        employees: this.state.employees.sort(function (a, b) {
-          var dateA = new Date(a.dob).getTime();
-          var dateB = new Date(b.dob).getTime();
-          return dateA = dateB ? 1 : -1;
-        }),
-      });
-    }
+    } 
   }
 
   render() {
