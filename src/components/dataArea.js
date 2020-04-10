@@ -68,13 +68,19 @@ export default class DataArea extends Component {
         <label for="position">Filter by position:</label>
         <select onChange={this.handlePositionChange} id="position">
           <option value="All">All</option>
-          <option value="Manager">Manager</option>
-          <option value="Sales">Sales</option>
-          <option value="Logistics">Logistics</option>
-          <option value="Accounting">Accounting</option>
+          <option value="KOAM">KOAM</option>
+          <option value="News">News</option>
+          <option value="Sound Engineer">Sound Engineer</option>
+          <option value="Executive Producer">Executive Producer</option>
+          <option value="Producer">Producer</option>
+          <option value="Sales Manager">Sales Manager</option>
+          <option value="Security">Security</option>
+          <option value="Music Engineer">Music Engineer</option>
           <option value="Tech Support">Tech Support</option>
         </select>
-        <button type='button' onClick={this.sortByDateOfBirth}>Filter by Date of Birth</button>
+        <button type="button" onClick={this.sortByDateOfBirth}>
+          Filter by Date of Birth
+        </button>
         <table>
           <thead>
             <tr>
