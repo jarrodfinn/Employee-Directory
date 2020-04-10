@@ -2,6 +2,7 @@ import React from 'react';
 import Wrapper from './components/wrapper';
 import Header from './components/header';
 import Main from './components/main';
+import Footer from './components/footer';
 import './App.css';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       <div className="body">
               <Wrapper>
         <Header />
-        <Main />
+          <Main />
+        <Footer />
       </Wrapper>
 
       </div>

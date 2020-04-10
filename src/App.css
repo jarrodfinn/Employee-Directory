@@ -37,18 +37,28 @@
   }
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
+}
+
+th {
+  text-decoration: underline;
 }
 h1 {
   background-color: cadetblue;
-  height: 100px;
+  /* height: 100px; */
   text-align: center;
-  padding-top: 20px;
-  border-bottom: chartreuse;
-  border-width: 20px;
+  padding-top: 5px;
+  border-bottom-color: chartreuse;
+  border-top-color: chartreuse;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 15px;
+  padding-bottom: 10px;
 }
-
-
-
+html {
+  background-color: cadetblue;
+}
 

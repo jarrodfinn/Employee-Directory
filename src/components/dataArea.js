@@ -10,8 +10,6 @@ export default class DataArea extends Component {
     employees: [],
     allEmployees: [],
     isLoading: true,
-    order: "descend",
-    filteredUsers: [{}],
   };
   headings = ["name..."];
 
@@ -72,27 +70,31 @@ export default class DataArea extends Component {
     }
     return (
       <div>
-        <label htmlFor="position">Filter by position:</label>
-        <select onChange={this.handlePositionChange} id="position">
-          <option value="All">All</option>
-          <option value="KOAM">KOAM</option>
-          <option value="News">News</option>
-          <option value="Sound Engineer">Sound Engineer</option>
-          <option value="Executive Producer">Executive Producer</option>
-          <option value="Producer">Producer</option>
-          <option value="Sales Manager">Sales Manager</option>
-          <option value="Security">Security</option>
-          <option value="Music Engineer">Music Engineer</option>
-          <option value="Tech Support">Tech Support</option>
-        </select>
-        <label htmlFor="dob">Sort by date of birth:</label>
-        <select onChange={this.sortByDateOfBirth}>
-          <option value="default">Default</option>
-          <option value="oldest">Oldest to Youngest</option>
-          <option value="youngest">Youngest to Oldest</option>
-        </select>
-        <table className="table table-bordered">
-          <thead>
+        <div>
+          <label htmlFor="position">Filter by position:</label>
+          <select onChange={this.handlePositionChange} id="position">
+            <option value="All">All</option>
+            <option value="KOAM">KOAM</option>
+            <option value="News">News</option>
+            <option value="Sound Engineer">Sound Engineer</option>
+            <option value="Executive Producer">Executive Producer</option>
+            <option value="Producer">Producer</option>
+            <option value="Sales Manager">Sales Manager</option>
+            <option value="Security">Security</option>
+            <option value="Music Engineer">Music Engineer</option>
+            <option value="Tech Support">Tech Support</option>
+          </select>
+        </div>
+        <div>
+          <label htmlFor="dob">Sort by date of birth:</label>
+          <select onChange={this.sortByDateOfBirth}>
+            <option value="default">Default</option>
+            <option value="oldest">Oldest to Youngest</option>
+            <option value="youngest">Youngest to Oldest</option>
+          </select>
+        </div>
+        <table className="table table-striped">
+          <thead className="thead-dark">
             <tr>
               <th>Name</th>
               <th>Position</th>
