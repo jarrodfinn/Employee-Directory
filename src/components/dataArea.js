@@ -1,12 +1,7 @@
-//class component with state and heading. Functions for sorting and searching.
-//parent
-//house data table
-
 import React, { Component } from "react";
 
 export default class DataArea extends Component {
   state = {
-    //componentDidMount
     employees: [],
     allEmployees: [],
     isLoading: true,
@@ -19,7 +14,11 @@ export default class DataArea extends Component {
         return response.json();
       })
       .then((response) => {
-        this.setState({ employees: response, allEmployees: response, isLoading: false });
+        this.setState({
+          employees: response,
+          allEmployees: response,
+          isLoading: false,
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -60,11 +59,10 @@ export default class DataArea extends Component {
           return dateA < dateB ? 1 : -1;
         }),
       });
-    } 
-  }
+    }
+  };
 
   render() {
-    // console.log("employees", this.state.employees)
     if (this.state.isLoading === true) {
       return <div>Loading...</div>;
     }
