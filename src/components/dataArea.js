@@ -109,7 +109,7 @@ export default class DataArea extends Component {
               return (
                 <tr key={employee.id}>
                   <td>
-                    <img src={employee.pic}></img>
+                    <img alt="pic" src={employee.pic}></img>
                   </td>
                   <td>{employee.name}</td>
                   <td>{employee.position}</td>
