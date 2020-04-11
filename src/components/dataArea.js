@@ -93,9 +93,10 @@ export default class DataArea extends Component {
             <option value="youngest">Youngest to Oldest</option>
           </select>
         </div>
-        <table className="table table-striped">
+        <table className="table table-striped table-hover">
           <thead className="thead-dark">
             <tr>
+              <th>Profile Pic</th>
               <th>Name</th>
               <th>Position</th>
               <th>Date of Birth</th>
@@ -107,6 +108,9 @@ export default class DataArea extends Component {
             {this.state.employees.map(function (employee) {
               return (
                 <tr key={employee.id}>
+                  <td>
+                    <img src={employee.pic}></img>
+                  </td>
                   <td>{employee.name}</td>
                   <td>{employee.position}</td>
                   <td>{employee.dob}</td>

@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "pic": "/images/howard.jpg",
     "name": "Howard Stern",
     "position": "KOAM",
     "dob": "01-12-1954",
@@ -9,6 +10,7 @@
   },
   {
     "id": "2",
+    "pic": "/images/robin.jpg",
     "name": "Robin Quivers",
     "position": "News",
     "dob": "08-08-1952",
@@ -17,6 +19,7 @@
   },
   {
     "id": "3",
+    "pic": "/images/fred.jpg",
     "name": "Fred Norris",
     "position": "Sound Engineer",
     "dob": "07-09-1955",
@@ -25,6 +28,7 @@
   },
   {
     "id": "4",
+    "pic": "/images/bababooey.jpg",
     "name": "Gary Dell'Abate",
     "position": "Executive Producer",
     "dob": "03-14-1961",
@@ -33,6 +37,7 @@
   },
   {
     "id": "5",
+    "pic": "/images/hein.jpg",
     "name": "Jon Hein",
     "position": "Producer",
     "dob": "11-24-1967",
@@ -40,6 +45,7 @@
     "phone": "555-555-1967"
   }, {
     "id": "6",
+    "pic": "/images/JD.jpg",
     "name": "J.D. Harmeyer",
     "position": "Producer",
     "dob": "11-02-1979",
@@ -47,6 +53,7 @@
     "phone": "555-555-1979"
   }, {
     "id": "7",
+    "pic": "/images/sal.jpg",
     "name": "Sal Governale",
     "position": "Sales Manager",
     "dob": "10-24-1968",
@@ -54,6 +61,7 @@
     "phone": "555-555-1968"
   }, {
     "id": "8",
+    "pic": "/images/ronnie.jpg",
     "name": "Ronnie Mund",
     "position": "Security",
     "dob": "10-28-1949",
@@ -61,6 +69,7 @@
     "phone": "555-555-1949"
   }, {
     "id": "9",
+    "pic": "/images/richard.jpg",
     "name": "Richard Christy",
     "position": "Music Engineer",
     "dob": "04-01-1974",
@@ -68,6 +77,7 @@
     "phone": "555-555-1974"
   }, {
     "id": "10",
+    "pic": "/images/artie.jpg",
     "name": "Artie Lange",
     "position": "Tech Support",
     "dob": "10-11-1967",
