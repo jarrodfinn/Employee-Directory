@@ -12,7 +12,7 @@ As a user, I want to be able to view my entire employee directory at once so tha
 ## Getting Started
 
 The application is deployed on Heroku. 
-https://frightfinder.herokuapp.com/
+https://jpf-employee-directory.herokuapp.com/
 
 ## Functionality
 
