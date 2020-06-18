@@ -3,7 +3,7 @@
 Howard Stern Staff Employee Directory
 
 ## Overview
-For this Boot Camp assignment, the goal was to create an employee directory with React. This assignment required the application's UI to be broken up into components, manage component state, and respond to user events. This was my first React application.
+The goal was to create an employee directory with Reactjs. This assignment required the application's UI to be broken up into components, manage component state, and respond to user events. This was my first Reactjs application.
 
 ## User Story
 
